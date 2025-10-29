@@ -1,0 +1,44 @@
+/* Make the wrapper horizontal */
+.drap-and-drop-wrapper {
+  display: flex;
+  background-color: antiquewhite;
+  border: 1px solid #ccc;
+  width: 700px;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+
+  /* Style individual input items */
+  .drag-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: move;
+    transition: transform 0.2s ease;
+  }
+}
+
+/* Grab cursor when dragging */
+.drag-item:active {
+  cursor: move;
+}
+
+/* Drag preview effect */
+.cdk-drag-preview {
+  background: #e0e0e0 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  min-width: 200px !important;
+  padding: 10px !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Original element while dragging becomes slightly transparent */
+.cdk-drag-placeholder {
+  opacity: 0.5;
+}
